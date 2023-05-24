@@ -1,0 +1,16 @@
+# name: Deployement
+# on: 
+#     push:
+#         branches:
+#         - main
+# jobs:
+#     build: 
+#         uses: actions/checkout@v3
+#     test:
+#         runs-on: ubuntu-latest
+#         steps:
+#         - uses: actions/checkout@v3
+#         - name: Run a one-line script
+#           run: 
+#     systest: 
+#     prod:
