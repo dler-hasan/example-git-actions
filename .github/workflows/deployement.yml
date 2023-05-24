@@ -1,0 +1,17 @@
+name: Deployement
+on: 
+    push:
+        branches:
+        - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run build, lint, and test
+        uses: ./.github/workflows/build-lint-test.yaml
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Deploy to test environment
+      run: echo "Deploying to test environment"
