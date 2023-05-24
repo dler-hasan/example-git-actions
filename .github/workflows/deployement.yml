@@ -1,0 +1,30 @@
+name: Deployement
+on: 
+    push:
+        branches:
+        - main
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    environment: test
+    steps:
+    - uses: actions/checkout@v3
+    - name: Deploy to test environment
+      run: echo "Deploying to test environment"
+  systest:
+    runs-on: ubuntu-latest
+    environment: systest
+    needs: test
+    steps:
+    - uses: actions/checkout@v3
+    - name: Deploy to systest environment
+      run: echo "Deploying to systest environment"
+  prod: 
+    runs-on: ubuntu-latest
+    environment: prod
+    needs: systest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Deploy to prod environment
+      run: echo "Deploying to prod environment"
+  

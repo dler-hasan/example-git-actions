@@ -1,0 +1,1 @@
+[![Deployement](https://github.com/dler-hasan/example-git-actions/actions/workflows/deployement.yml/badge.svg)](https://github.com/dler-hasan/example-git-actions/actions/workflows/deployement.yml)
